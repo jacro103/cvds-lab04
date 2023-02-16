@@ -1,7 +1,7 @@
 package hangman.model;
 
 public class PowerScore implements GameScore{
-
+    private int puntaje = 0;
     /**
      * @pre 0 puntos
      * @pos -8 letras incorrectas
@@ -13,6 +13,27 @@ public class PowerScore implements GameScore{
      */
     @Override
     public int calculateScore(int correctCount, int incorrectCount) {
-        return 0;
+        int correct = correctCount;
+        puntaje += (incorrectCount * -8) + (elevado(correct));
+        if(puntaje < 0){
+            puntaje = 0;
+        }
+        else if(puntaje > 500){
+            puntaje = 500;
+        }
+        return puntaje;
+    }
+
+    private int elevado(int correct){
+        int num = 1;
+        if(correct > 0){
+            for(int i = 0; i < correct; i++){
+                num = num * 5;
+            }
+        }
+        else{
+            num = 0;
+        }
+        return num;
     }
 }

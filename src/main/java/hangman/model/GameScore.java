@@ -6,6 +6,5 @@ package hangman.model;
  * @param incorrectCount puntaje de letras no acertadas
  */
 public interface GameScore{
-    
     public int calculateScore(int correctCount , int incorrectCount );
 }
