@@ -1,6 +1,7 @@
 package hangman;
 
 public class GameScoreTest {
+
     /**
      * OriginalScore: 
      * @pre 100 puntos
