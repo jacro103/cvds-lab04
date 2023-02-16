@@ -1,4 +1,9 @@
 package hangman;
+import org.junit.Assert;
+import org.junit.Test;
+
+import hangman.model.GameScore;
+import hangman.model.OriginalScore;
 
 public class GameScoreTest {
 
@@ -18,5 +23,11 @@ public class GameScoreTest {
      * @pos +10 letras correctas
      * @pos 0 min puntaje
      */
-    
+
+
+    @Test
+    public void validateGameOriginalScore() {
+        GameScore gamescore = new OriginalScore();
+        Assert.assertEquals(RegisterResult.VALID, );
+    }
 }
