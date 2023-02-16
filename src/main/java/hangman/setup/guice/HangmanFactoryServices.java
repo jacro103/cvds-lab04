@@ -5,6 +5,8 @@
  */
 package hangman.setup.guice;
 
+import hangman.model.BonusScore;
+
 /**
  *
  * @author 2106913
