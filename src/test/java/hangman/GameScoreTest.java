@@ -1,4 +1,6 @@
 package hangman;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,6 +30,7 @@ public class GameScoreTest {
     @Test
     public void validateGameOriginalScore() {
         GameScore gamescore = new OriginalScore();
-        Assert.assertEquals(RegisterResult.VALID, );
+        int puntaje = gamescore.calculateScore(3, 2);
+        assertEquals(80, puntaje);
     }
 }
