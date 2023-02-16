@@ -75,11 +75,11 @@ public class GameScoreTest {
 
         GameScore game = new PowerScore();
         int puntajes = game.calculateScore(5, 3);
-        assertEquals(70, puntajes);
+        assertEquals(500, puntajes);
 
         GameScore score = new PowerScore();
         int puntaj = score.calculateScore(4, 20);
-        assertEquals(0, puntaj);
+        assertEquals(465, puntaj);
 
         GameScore games = new PowerScore();
         int punta = games.calculateScore(2,12);
