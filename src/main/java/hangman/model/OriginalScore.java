@@ -13,7 +13,7 @@ public class OriginalScore implements GameScore{
      */
     @Override
     public int calculateScore(int correctCount, int incorrectCount) {
-        puntaje -= (incorrectCount * -10);
+        puntaje += (incorrectCount * -10);
         if(puntaje < 0){
             puntaje = 0;
         }
