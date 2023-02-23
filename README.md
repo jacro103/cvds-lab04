@@ -1,6 +1,6 @@
 ### Escuela Colombiana de Ingeniería
-##Sebastian David Blanco 
-##Jose Alejandro Correa
+## Sebastian David Blanco 
+## Jose Alejandro Correa
 
 ### Procesos de Desarrollo de Software
 
