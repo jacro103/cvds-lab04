@@ -4,8 +4,8 @@
 *           Omar Rodriguez
 * class: CS 245 - Programming Graphical User Interfaces
 *
-* assignment: Swing Project v1.0
-* date last modified: 10/11/2016
+* assignment: Swing Project v1.1
+* date last modified: 3/02/2023
 *
 * purpose: This is the model component for the game screen
 *
@@ -24,7 +24,7 @@ public class GameModel {
     private LocalDateTime dateTime;
     private int gameScore;
     private int[] lettersUsed;
-    GameScore gameScoreloc;
+    GameScore score;
     
     
     private HangmanDictionary dictionary;
@@ -35,9 +35,10 @@ public class GameModel {
     
     
    
-    public GameModel(HangmanDictionary dictionary){
+    public GameModel(GameScore score, HangmanDictionary dictionary){
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary=dictionary;
+        this.score = score;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
@@ -75,12 +76,11 @@ public class GameModel {
         }
         if(positions.size() == 0){
             incorrectCount++;
-            gameScore -= 10;
         } else {
             correctCount += positions.size();
         }
 
-        gameScore = gameScoreloc.calculateScore(correctCount, incorrectCount);
+        gameScore = score.calculateScore(correctCount, incorrectCount);
         return positions;
         
     }
